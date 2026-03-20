@@ -217,8 +217,8 @@
 
 /* Color Variables */
 :root {
-  --primary-color: #e5612f; /* Example Primary Color */
-  --secondary-color: #6c757d; /* Example Secondary Color */
+  --primary-color: #FF9933; /* Example Primary Color */
+  --secondary-color: #138808; /* Example Secondary Color */
   --background-color: #eef0f1; /* Example Background Color */
   --text-color: #212529; /* Example Text Color */
   --heading-color: #343a40; /* Example Heading Color */
@@ -1127,8 +1127,74 @@ header.scrolled {
 .our-menu .item-wrapper .item-right .price-symbol,
 .lunch-time .item-wrapper .item-right .price-symbol,
 .chef-choise .item-wrapper .item-right .price-symbol  {
-  vertical-align: super;
+  vertical-align: baseline;
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+/* Keep full menu category blocks scannable on the long menu page */
+.menu-page .menu-category-heading {
+  margin: 30px 0 14px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+}
+
+.menu-page .full-menu-section-title {
+  margin: 20px 0 8px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.menu-page .full-menu-section-title-secondary {
+  margin-top: 34px;
+}
+
+/* Full menu should be a clean list, not hero-card styling */
+.menu-page .lunch-time .item-wrapper {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
+}
+
+.menu-page .lunch-time .item-wrapper .item-left {
+  width: calc(100% - 86px);
+}
+
+.menu-page .lunch-time .item-wrapper .item-left h5 {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.menu-page .lunch-time .item-wrapper .item-left h5::after {
+  content: none;
+}
+
+.menu-page .lunch-time .item-wrapper .item-left p {
+  font-size: 13px;
+  color: #6f6f6f;
+}
+
+.menu-page .lunch-time .item-wrapper .item-right {
+  min-width: 78px;
+  text-align: right;
+}
+
+.menu-page .lunch-time .item-wrapper .item-right .item-price {
   font-size: 18px;
+}
+
+.menu-page .our-menu .item-wrapper .item-right .price-symbol,
+.menu-page .lunch-time .item-wrapper .item-right .price-symbol,
+.menu-page .chef-choise .item-wrapper .item-right .price-symbol {
+  vertical-align: baseline;
+  font-size: inherit;
+  letter-spacing: 0;
 }
 
 .our-menu .item-wrapper .item-right .item-btn a {
